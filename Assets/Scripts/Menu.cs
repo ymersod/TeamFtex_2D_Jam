@@ -61,15 +61,22 @@ public class Menu : MonoBehaviour
         if (p1_ready && p2_ready)
         {
             button.enabled = true;
+            button.interactable = true;
         }
         else
         {
             button.enabled = false;
+            button.interactable = false;
         }
     }
 
     public void OnClickStart()
     {
+        PlayerPrefs.SetString("p1_name", p1_name);
+        PlayerPrefs.SetString("p2_name", p2_name);
+        PlayerPrefs.SetInt("p1_char", 1);
+        PlayerPrefs.SetInt("p2_char", 1);
+
         Debug.Log($"Player1: {p1_name}");
         Debug.Log($"Player2: {p2_name}");
 
