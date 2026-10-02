@@ -1,8 +1,9 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Player_Controller : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
+    public string playerName;
     [SerializeField] private Bullet BulletPrefab;
     private Vector2 walkingDirection;
     [SerializeField] private Vector2 lookingDirection;
