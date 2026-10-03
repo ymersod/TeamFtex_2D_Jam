@@ -5,6 +5,12 @@ public enum SpotActions
     Start,
 }
 
+public enum SpotType
+{
+    Passive,
+    Active
+}
+
 public enum PlayerType
 {
     p1,

@@ -1,12 +1,12 @@
-using Unity.Mathematics;
-using Unity.VisualScripting;
 using UnityEngine;
-
 [RequireComponent(typeof(Collider))]
+
+[RequireComponent(typeof(PlayerLogic))]
 public class SpotCollision : MonoBehaviour
 {
     private BoardHandler boardHandler;
-    public PlayerType playerType;
+    private PlayerLogic pLogic;
+    private PlayerType playerType;
 
     [SerializeField] private Vector3 boxSizeMultiplier = Vector3.one;
 
@@ -16,6 +16,8 @@ public class SpotCollision : MonoBehaviour
     {
         boardHandler = FindAnyObjectByType<BoardHandler>();
         m_Collider = GetComponent<Collider>();
+        pLogic = GetComponent<PlayerLogic>();
+        playerType = pLogic.playerType;
     }
 
     void FixedUpdate()
@@ -49,7 +51,6 @@ public class SpotCollision : MonoBehaviour
             }
         }
 
-        // Debug.Log(curSpot);
         if (curSpot)
             boardHandler.ActivateSpot(curSpot, playerType);
         else

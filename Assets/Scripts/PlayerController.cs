@@ -8,7 +8,6 @@ public class PlayerController : MonoBehaviour
     private Vector3 walkingDirection;
     public float force;
     private BoardHandler boardHandler;
-    public float velocity;
     int cooldown;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
