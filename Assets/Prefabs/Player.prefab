@@ -86,7 +86,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 99
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -2241300882062069919, guid: 9dd57e4a0fdc34f57b2167755c1535c2, type: 3}
+  m_Sprite: {fileID: 6150372935363177057, guid: 159f2b28618fd4e35b6e55ae31872950, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -160,9 +160,9 @@ MonoBehaviour:
   spawner: {fileID: 0}
   playerType: 0
   lookingDirection: {x: 0, y: 0, z: 0}
-  money: 0
+  money: 100
   health: 0
-  ammo: 0
+  ammo: 100
   inJail: 0
 --- !u!114 &3775217859573537625
 MonoBehaviour:
@@ -426,7 +426,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3802703604032996775}
@@ -479,8 +479,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 11.139999, y: 8.359999, z: 3.5388489}
-  m_Center: {x: 0, y: 0, z: -0.15441199}
+  m_Size: {x: 4.9799995, y: 4.4499993, z: 2.2153878}
+  m_Center: {x: 0, y: 0, z: -0.013165325}
 --- !u!212 &3493357868356248879
 SpriteRenderer:
   serializedVersion: 3
@@ -530,7 +530,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 99
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -2241300882062069919, guid: 9dd57e4a0fdc34f57b2167755c1535c2, type: 3}
+  m_Sprite: {fileID: 6150372935363177057, guid: 159f2b28618fd4e35b6e55ae31872950, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
