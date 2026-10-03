@@ -161,7 +161,7 @@ MonoBehaviour:
   playerType: 0
   lookingDirection: {x: 0, y: 0, z: 0}
   money: 100
-  health: 0
+  health: 10
   ammo: 100
   inJail: 0
 --- !u!114 &3775217859573537625
