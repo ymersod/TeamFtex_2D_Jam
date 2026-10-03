@@ -1,6 +1,5 @@
 using UnityEngine;
 [RequireComponent(typeof(Collider))]
-[RequireComponent(typeof(PlayerLogic))]
 public class SpotCollision : MonoBehaviour
 {
     private BoardHandler boardHandler;
@@ -14,8 +13,8 @@ public class SpotCollision : MonoBehaviour
     void Start()
     {
         boardHandler = FindAnyObjectByType<BoardHandler>();
-        m_Collider = GetComponent<Collider>();
-        pLogic = GetComponent<PlayerLogic>();
+        m_Collider = gameObject.GetComponent<Collider>();
+        pLogic = GetComponentInChildren<PlayerLogic>();
         playerType = pLogic.playerType;
     }
 

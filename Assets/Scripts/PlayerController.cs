@@ -6,8 +6,10 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     private Vector3 walkingDirection;
-    public float force;
     private BoardHandler boardHandler;
+    [SerializeField] float turnForce = 10f;
+
+    [SerializeField] float force = 10f;
     int cooldown;
     void Start()
     {
@@ -19,11 +21,36 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        GetComponent<Rigidbody>().AddForce(walkingDirection * force);
-        if (GetComponent<Rigidbody>().linearVelocity.sqrMagnitude > 0.01)
+        Rigidbody rb = GetComponent<Rigidbody>();
+        Rigidbody rbParent = transform.parent.GetComponent<Rigidbody>();
+
+        float z = transform.eulerAngles.z * Mathf.Deg2Rad;
+
+        Vector2 facingDirection = new Vector2(
+            -Mathf.Cos(z),
+            Mathf.Sin(z)
+        );
+        // Debug.Log(facingDirection);
+
+        if (Mathf.Abs(walkingDirection.y) > 0.01f)
         {
-            GetComponent<PlayerLogic>().lookingDirection = GetComponent<Rigidbody>().linearVelocity.normalized;
+            rbParent.AddForce(
+               force * facingDirection.x * walkingDirection.y, 0, force * -facingDirection.y * walkingDirection.y,
+               ForceMode.Force
+           );
         }
+
+        rb.position = rbParent.position;
+        if (Mathf.Abs(walkingDirection.x) > 0.01f)
+        {
+            rb.AddTorque(
+                0,
+                0,
+                turnForce * -walkingDirection.x,
+                ForceMode.Force
+            );
+        }
+
         if (cooldown > 0)
         {
             cooldown--;
@@ -32,9 +59,9 @@ public class PlayerController : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context)
     {
+
         walkingDirection.x = context.ReadValue<Vector2>().x;
-        walkingDirection.z = context.ReadValue<Vector2>().y;
-        // Debug.Log($"Input Move: {walkingDirection}");
+        walkingDirection.y = context.ReadValue<Vector2>().y;
     }
 
     public void OnShoot(InputAction.CallbackContext context)
