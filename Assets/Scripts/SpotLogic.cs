@@ -89,6 +89,14 @@ public class SpotLogic : MonoBehaviour
         Vector3 spawnPos = new Vector3(center.x, prefabChosen.transform.position.y + yBoundsPrefab, center.z + halfZ);
         GameObject houseSpawned = Instantiate(prefabChosen);
         houseSpawned.transform.SetPositionAndRotation(spawnPos, Quaternion.Euler(-90, 90, 0));
+        if (spotState == SpotState.HouseBuild)
+        {
+            houseSpawned.GetComponent<HouseLogic>().owner = playerType;
+        }
+        else if (spotState == SpotState.HotelBuild)
+        {
+            houseSpawned.GetComponent<HotelLogic>().owner = playerType;
+        }
         building = houseSpawned;
     }
 
