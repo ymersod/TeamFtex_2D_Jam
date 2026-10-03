@@ -111,6 +111,8 @@ MonoBehaviour:
   velocity: 10
   owner: 0
   ttl: 300
+  triggerCooldown: 0
+  id: 0
 --- !u!135 &-7690726176121633372
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -126,7 +128,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
