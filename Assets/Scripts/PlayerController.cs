@@ -1,9 +1,12 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-
 [RequireComponent(typeof(PlayerLogic))]
+
+[RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
 {
+    private Vector3 walkingDirection;
+    public float force;
     private Vector2 walkingDirection;
     private BoardHandler boardHandler;
     public float velocity;
@@ -14,6 +17,7 @@ public class PlayerController : MonoBehaviour
         boardHandler = FindAnyObjectByType<BoardHandler>();
 
         cooldown = 0;
+        walkingDirection = new Vector3(0, 0, 0);
     }
 
     // Update is called once per frame
@@ -24,10 +28,15 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector3 pos = transform.position;
-        pos.x += walkingDirection.x * velocity;
-        pos.y += walkingDirection.y * velocity;
-        transform.position = pos;
+        GetComponent<Rigidbody>().AddForce(walkingDirection * force);
+        if (GetComponent<Rigidbody>().linearVelocity.sqrMagnitude > 0.01)
+        {
+            GetComponent<PlayerLogic>().lookingDirection = GetComponent<Rigidbody>().linearVelocity.normalized;
+        }
+        // Vector3 pos = transform.position;
+        // pos.x += walkingDirection.x * force;
+        // pos.y += walkingDirection.y * force;
+        // transform.position = pos;
         if (cooldown > 0)
         {
             cooldown--;
@@ -36,11 +45,8 @@ public class PlayerController : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        walkingDirection = context.ReadValue<Vector2>();
-        if (walkingDirection.sqrMagnitude > 0.99)
-        {
-            GetComponent<PlayerLogic>().lookingDirection = context.ReadValue<Vector2>();
-        }
+        walkingDirection.x = context.ReadValue<Vector2>().x;
+        walkingDirection.z = context.ReadValue<Vector2>().y;
         // Debug.Log($"Input Move: {walkingDirection}");
     }
 
