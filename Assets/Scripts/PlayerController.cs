@@ -7,7 +7,6 @@ public class PlayerController : MonoBehaviour
 {
     private Vector3 walkingDirection;
     public float force;
-    private Vector2 walkingDirection;
     private BoardHandler boardHandler;
     public float velocity;
     int cooldown;
@@ -33,10 +32,6 @@ public class PlayerController : MonoBehaviour
         {
             GetComponent<PlayerLogic>().lookingDirection = GetComponent<Rigidbody>().linearVelocity.normalized;
         }
-        // Vector3 pos = transform.position;
-        // pos.x += walkingDirection.x * force;
-        // pos.y += walkingDirection.y * force;
-        // transform.position = pos;
         if (cooldown > 0)
         {
             cooldown--;
