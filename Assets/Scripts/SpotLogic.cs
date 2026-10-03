@@ -10,6 +10,8 @@ public class SpotLogic : MonoBehaviour
     public SpotType spotType;
     public SpriteRenderer renderer;
 
+    public GameObject house;
+
     private TMP_Text textp1;
     private TMP_Text textp2;
 
@@ -38,15 +40,28 @@ public class SpotLogic : MonoBehaviour
     public void DeactivateSpot(PlayerType playerType)
     {
         renderer.color = Color.white;
-        // Debug.Log("hhhhh");
         if (playerType == PlayerType.p1)
             textp1.text = "";
         else
             textp2.text = "";
     }
 
+
+    private void BuildHouse(PlayerType playerType)
+    {
+        BoxCollider col = GetComponentInChildren<BoxCollider>();
+        float halfZ = col.bounds.extents.z / 2;
+
+        Vector3 spawnPos = new Vector3(transform.position.x, transform.position.y, transform.position.z + halfZ);
+        GameObject houseSpawned = Instantiate(house);
+        houseSpawned.transform.position = spawnPos;
+    }
+
     public void TriggerSpot(PlayerType playerType)
     {
-
+        if (spotActions == SpotActions.Buy && spotType == SpotType.Active)
+        {
+            BuildHouse(playerType);
+        }
     }
 }

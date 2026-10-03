@@ -9,19 +9,12 @@ public class PlayerController : MonoBehaviour
     public float force;
     private BoardHandler boardHandler;
     int cooldown;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         boardHandler = FindAnyObjectByType<BoardHandler>();
 
         cooldown = 0;
         walkingDirection = new Vector3(0, 0, 0);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     void FixedUpdate()

@@ -1,6 +1,5 @@
 using UnityEngine;
 [RequireComponent(typeof(Collider))]
-
 [RequireComponent(typeof(PlayerLogic))]
 public class SpotCollision : MonoBehaviour
 {
