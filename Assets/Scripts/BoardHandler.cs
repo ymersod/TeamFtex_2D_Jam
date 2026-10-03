@@ -23,4 +23,16 @@ public class BoardHandler : MonoBehaviour
 
         spotLogic.ActivateSpot(playerType);
     }
+
+    public void TryDeactivate(PlayerType playerType)
+    {
+        SpotLogic cachedSpot = spotsCached[playerType];
+        if (cachedSpot)
+        {
+            cachedSpot.DeactivateSpot(playerType);
+        }
+
+        spotsCached[playerType] = null;
+
+    }
 }
