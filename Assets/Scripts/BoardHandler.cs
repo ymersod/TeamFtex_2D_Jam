@@ -38,6 +38,7 @@ public class BoardHandler : MonoBehaviour
 
     public void TriggerActionActiveSpot(PlayerType playerType)
     {
+        Debug.Log("Fig");
         SpotLogic cachedSpot = spotsCached[playerType];
         if (cachedSpot)
         {
