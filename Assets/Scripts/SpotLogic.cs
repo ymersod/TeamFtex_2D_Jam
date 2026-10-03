@@ -7,6 +7,7 @@ public class SpotLogic : MonoBehaviour
     public float rent;
     public string owner;
     public SpotActions spotActions;
+    public SpotType spotType;
     public SpriteRenderer renderer;
 
     private TMP_Text textp1;
