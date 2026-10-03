@@ -50,11 +50,15 @@ public class SpotLogic : MonoBehaviour
     private void BuildHouse(PlayerType playerType)
     {
         BoxCollider col = GetComponentInChildren<BoxCollider>();
-        float halfZ = col.bounds.extents.z / 2;
+        Vector3 center = col.bounds.center;
+        float halfZ = col.bounds.extents.x;
+        float halfY = col.bounds.extents.y;
+        float halfX = col.bounds.extents.x;
 
-        Vector3 spawnPos = new Vector3(transform.position.x, transform.position.y, transform.position.z + halfZ);
+        Vector3 spawnPos = new Vector3(center.x, 0.2f, center.z + halfZ);
         GameObject houseSpawned = Instantiate(house);
         houseSpawned.transform.position = spawnPos;
+        houseSpawned.transform.rotation = Quaternion.Euler(-90, 90, 0);
     }
 
     public void TriggerSpot(PlayerType playerType)
