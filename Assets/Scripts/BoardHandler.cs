@@ -13,7 +13,6 @@ public class BoardHandler : MonoBehaviour
 
     public void ActivateSpot(SpotLogic spotLogic, PlayerType playerType)
     {
-        // Debug.Log("Triggered!");
         SpotLogic cachedSpot = spotsCached[playerType];
         if (cachedSpot)
         {
@@ -38,6 +37,10 @@ public class BoardHandler : MonoBehaviour
 
     public void TriggerActionActiveSpot(PlayerType playerType)
     {
-        Debug.Log("Heeh");
+        SpotLogic cachedSpot = spotsCached[playerType];
+        if (cachedSpot)
+        {
+            cachedSpot.TriggerSpot(playerType);
+        }
     }
 }

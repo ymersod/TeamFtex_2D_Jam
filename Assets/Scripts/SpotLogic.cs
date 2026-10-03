@@ -27,7 +27,10 @@ public class SpotLogic : MonoBehaviour
     {
         renderer.color = Color.beige;
         if (playerType == PlayerType.p1)
+        {
+            // Debug.Log("ahhh");
             textp1.text = $"<color=green>{spotActions} [X]";
+        }
         else
             textp2.text = $"<color=green>{spotActions} [ENTER]";
     }
@@ -35,12 +38,15 @@ public class SpotLogic : MonoBehaviour
     public void DeactivateSpot(PlayerType playerType)
     {
         renderer.color = Color.white;
-
+        // Debug.Log("hhhhh");
         if (playerType == PlayerType.p1)
             textp1.text = "";
         else
             textp2.text = "";
     }
 
+    public void TriggerSpot(PlayerType playerType)
+    {
 
+    }
 }
