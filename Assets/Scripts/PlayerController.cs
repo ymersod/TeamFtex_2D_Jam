@@ -30,7 +30,8 @@ public class PlayerController : MonoBehaviour
             -Mathf.Cos(z),
             Mathf.Sin(z)
         );
-        // Debug.Log(facingDirection);
+
+        GetComponent<PlayerLogic>().lookingDirection = new Vector3(facingDirection.x, 0, -facingDirection.y);
 
         if (Mathf.Abs(walkingDirection.y) > 0.01f)
         {
