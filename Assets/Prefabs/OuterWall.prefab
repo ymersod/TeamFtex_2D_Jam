@@ -43,7 +43,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 384
+    m_Bits: 1920
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -66,4 +66,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bf4c7fa90ba64c7f80c0f18c92274e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  vertical: 0
