@@ -39,6 +39,7 @@ public class PlayerLogic : MonoBehaviour
             Debug.Log($"{playerType} got hit by {bullet.owner}");
             health--;
             Destroy(bullet.gameObject);
+            Debug.Log(health);
             if (health <= 0)
             {
                 Die();
@@ -48,6 +49,7 @@ public class PlayerLogic : MonoBehaviour
 
     void Die()
     {
+        Debug.Log("Kill");
         Destroy(gameObject);
     }
 
