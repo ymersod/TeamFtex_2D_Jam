@@ -26,7 +26,28 @@ public class PlayerLogic : MonoBehaviour
     {
         if (ammo > 0 && !inJail)
         {
+            // Debug.Log("PlayerLogic.Shoot()");
             spawner.GetComponent<BulletSpawner>().Spawn(transform.position, lookingDirection, playerName);
+            ammo --;
         }
+    }
+
+    public void GetHit(Bullet bullet)
+    {
+        if (playerName != bullet.owner)
+        {
+            Debug.Log($"{playerName} got hit by {bullet.owner}");
+            health --;
+            Destroy(bullet.gameObject);
+            if (health <= 0)
+            {
+                Die();
+            }
+        }
+    }
+
+    void Die()
+    {
+        Destroy(gameObject);
     }
 }
