@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8862290450816670052}
   - component: {fileID: 6338730653685893490}
   - component: {fileID: 7528141474634012465}
+  - component: {fileID: 6333333239870507315}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -181,8 +182,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f404d551aa94a4d49b3013db8de864d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  BulletPrefab: {fileID: 2615784439860191759, guid: 02d49925635f9484b95aeac6329149ed, type: 3}
-  lookingDirection: {x: 1, y: 0}
   velocity: 0.3
 --- !u!114 &7528141474634012465
 MonoBehaviour:
@@ -223,53 +222,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: fb539dd2-a51b-4868-a302-2d16b045ef41
-    m_ActionName: 'Gameplay/Move 1[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6338730653685893490}
-        m_TargetAssemblyTypeName: Player_Controller, Assembly-CSharp
-        m_MethodName: OnShot
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 115a666b-e357-4eb6-a831-dea67199cf34
-    m_ActionName: 'Gameplay/Shoot 1[/Keyboard/leftShift]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 2cf000a4-a17b-476f-a0c4-f4665b391ae3
-    m_ActionName: 'Gameplay/Move 2[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 8835eb86-8b1e-4156-8b73-2333f7b56eee
-    m_ActionName: 'Gameplay/Shoot 2[/Keyboard/rightShift]'
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6338730653685893490}
-        m_TargetAssemblyTypeName: Player_Controller, Assembly-CSharp
-        m_MethodName: OnMove
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
     m_ActionId: 2a144cc1-04ba-456e-92bf-0f3d726bfcbf
     m_ActionName: 'P1/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6338730653685893490}
-        m_TargetAssemblyTypeName: Player_Controller, Assembly-CSharp
-        m_MethodName: OnShot
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnShoot
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -300,8 +259,8 @@ MonoBehaviour:
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6338730653685893490}
-        m_TargetAssemblyTypeName: Player_Controller, Assembly-CSharp
-        m_MethodName: OnShot
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnShoot
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -315,6 +274,24 @@ MonoBehaviour:
     m_ActionName: 'P2/Shoot[/Keyboard/rightShift]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: Gameplay
+  m_DefaultActionMap: 
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &6333333239870507315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6659096807730102826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9ecce56e4e934dd899008c530829f10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  spawner: {fileID: 0}
+  playerName: 
+  lookingDirection: {x: 1, y: 0}
+  money: 0
+  health: 0
+  ammo: 0

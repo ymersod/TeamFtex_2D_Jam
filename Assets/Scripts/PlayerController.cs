@@ -1,12 +1,10 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(PlayerLogic))]
 public class PlayerController : MonoBehaviour
 {
-    public string playerName;
-    [SerializeField] private Bullet BulletPrefab;
     private Vector2 walkingDirection;
-    [SerializeField] private Vector2 lookingDirection;
     public float velocity;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -33,18 +31,17 @@ public class PlayerController : MonoBehaviour
         walkingDirection = context.ReadValue<Vector2>();
         if (walkingDirection.sqrMagnitude > 0.99)
         {
-            lookingDirection = context.ReadValue<Vector2>();
+            GetComponent<PlayerLogic>().lookingDirection = context.ReadValue<Vector2>();
         }
         Debug.Log($"Input Move: {walkingDirection}");
     }
 
-    public void OnShot(InputAction.CallbackContext context)
+    public void OnShoot(InputAction.CallbackContext context)
     {
         if (context.action.IsPressed())
         {
-            Debug.Log("Shot");
-            Bullet bullet = Instantiate(BulletPrefab, transform.position, transform.rotation);
-            bullet.direction = lookingDirection;
+            Debug.Log("PlayerController.OnShoot()");
+            GetComponent<PlayerLogic>().Shoot();
         }
     }
 }

@@ -13,9 +13,11 @@ public class SpawnPlayers : MonoBehaviour
     {
         GameObject player1 = Instantiate(playerPrefeb, playerSpawnPosition1, Quaternion.identity);
         player1.GetComponent<PlayerInput>().SwitchCurrentActionMap("P1");
-        player1.GetComponent<PlayerController>().playerName = "P1";
+        player1.GetComponent<PlayerLogic>().playerName = "P1";
+        player1.GetComponent<PlayerLogic>().spawner = gameObject;
         GameObject player2 = Instantiate(playerPrefeb, playerSpawnPosition2, Quaternion.identity);
         player2.GetComponent<PlayerInput>().SwitchCurrentActionMap("P2");
-        player2.GetComponent<PlayerController>().playerName = "P2";
+        player2.GetComponent<PlayerLogic>().playerName = "P2";
+        player2.GetComponent<PlayerLogic>().spawner = gameObject;
     }
 }

@@ -144,3 +144,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   direction: {x: 0, y: 0}
   velocity: 0.1
+  ownr: 
+  ttl: 100

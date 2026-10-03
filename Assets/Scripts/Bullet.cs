@@ -4,12 +4,12 @@ public class Bullet : MonoBehaviour
 {
     public Vector2 direction;
     public float velocity;
-    int ttl;
+    public string owner;
+    [SerializeField] private int ttl;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        ttl = 100;
     }
 
     // Update is called once per frame
