@@ -110,7 +110,7 @@ MonoBehaviour:
   direction: {x: 0, y: 0, z: 0}
   velocity: 10
   owner: 0
-  ttl: 100
+  ttl: 300
 --- !u!135 &-7690726176121633372
 SphereCollider:
   m_ObjectHideFlags: 0
