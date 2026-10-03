@@ -67,5 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "TeamFøtex_2D_Jam.slnx"
+    "dotnet.defaultSolution": "TeamFtex_2D_Jam.slnx"
 }
