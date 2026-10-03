@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ff6eb5ea17f14779959a873bba7c503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  playerSpawnPosition1: {x: 0, y: 0, z: 0}
-  playerSpawnPosition2: {x: 0, y: 0, z: 0}
+  playerSpawnPosition1: {x: 1, y: 0, z: 1}
+  playerSpawnPosition2: {x: -1, y: 0, z: -1}
   playerControls: {fileID: -944628639613478452, guid: a4b8f6df9372b46c58cf6f295d68f433, type: 3}
   playerPrefeb: {fileID: 6659096807730102826, guid: 380629255285c47d3bf2f91b5ddd8592, type: 3}
 --- !u!114 &-3057343047145121519

@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void FixedUpdate()
@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
         transform.position = pos;
         if (cooldown > 0)
         {
-            cooldown --;
+            cooldown--;
         }
     }
 
@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
     // void OnCollisionEnter(Collision collision)
     // {
     //     Debug.Log(collision.thisGameObject.GetComponent<Bullet>());
-        
+
     // }
 
     void OnTriggerEnter(Collider other)

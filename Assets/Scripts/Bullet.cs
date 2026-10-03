@@ -5,7 +5,7 @@ public class Bullet : MonoBehaviour
 {
     public Vector2 direction;
     public float velocity;
-    public string owner;
+    public PlayerType owner;
     [SerializeField] private int ttl;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -16,7 +16,7 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void FixedUpdate()
@@ -26,7 +26,7 @@ public class Bullet : MonoBehaviour
         // pos.x += direction.x * velocity;
         // pos.y += direction.y * velocity;
         // transform.position = pos;
-        ttl --;
+        ttl--;
         if (ttl == 0)
         {
             Destroy(gameObject);

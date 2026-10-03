@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerLogic : MonoBehaviour
 {
     public GameObject spawner;
-    public string playerName;
+    public PlayerType playerType;
     public Vector2 lookingDirection;
     public int money;
     public int health;
@@ -13,13 +13,13 @@ public class PlayerLogic : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void Shoot()
@@ -27,17 +27,17 @@ public class PlayerLogic : MonoBehaviour
         if (ammo > 0 && !inJail)
         {
             // Debug.Log("PlayerLogic.Shoot()");
-            spawner.GetComponent<BulletSpawner>().Spawn(transform.position, lookingDirection, playerName);
-            ammo --;
+            spawner.GetComponent<BulletSpawner>().Spawn(transform.position, lookingDirection, playerType);
+            ammo--;
         }
     }
 
     public void GetHit(Bullet bullet)
     {
-        if (playerName != bullet.owner)
+        if (playerType != bullet.owner)
         {
-            Debug.Log($"{playerName} got hit by {bullet.owner}");
-            health --;
+            Debug.Log($"{playerType} got hit by {bullet.owner}");
+            health--;
             Destroy(bullet.gameObject);
             if (health <= 0)
             {
