@@ -49,7 +49,7 @@ public class SpotCollision : MonoBehaviour
             }
         }
 
-        Debug.Log(curSpot);
+        // Debug.Log(curSpot);
         if (curSpot)
             boardHandler.ActivateSpot(curSpot, playerType);
         else

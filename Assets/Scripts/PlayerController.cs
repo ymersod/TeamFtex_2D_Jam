@@ -5,11 +5,14 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     private Vector2 walkingDirection;
+    private BoardHandler boardHandler;
     public float velocity;
     int cooldown;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        boardHandler = FindAnyObjectByType<BoardHandler>();
+
         cooldown = 0;
     }
 
@@ -51,6 +54,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void OnAction(InputAction.CallbackContext context)
+    {
+        if (context.action.IsPressed() && cooldown == 0)
+        {
+            boardHandler.TriggerActionActiveSpot(GetComponent<PlayerLogic>().playerType);
+            cooldown = 2;
+        }
+    }
     // void OnCollisionEnter(Collision collision)
     // {
     //     Debug.Log(collision.thisGameObject.GetComponent<Bullet>());

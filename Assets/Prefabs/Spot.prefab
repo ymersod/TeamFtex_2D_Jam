@@ -163,6 +163,8 @@ MonoBehaviour:
   owner: 
   spotActions: 0
   renderer: {fileID: 6832714689648337336}
+  prefabTextp1: {fileID: 1952691993420757333, guid: 2521bd22480517c409b264b45e501240, type: 3}
+  prefabTextp2: {fileID: 0}
 --- !u!1 &5483009165946277435
 GameObject:
   m_ObjectHideFlags: 0
