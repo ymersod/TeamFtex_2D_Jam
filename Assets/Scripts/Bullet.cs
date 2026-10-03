@@ -8,17 +8,6 @@ public class Bullet : MonoBehaviour
     public PlayerType owner;
     [SerializeField] private int ttl;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     void FixedUpdate()
     {
         GetComponent<Rigidbody>().linearVelocity = direction * velocity;
