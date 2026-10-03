@@ -3,7 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class Bullet : MonoBehaviour
 {
-    public Vector2 direction;
+    public Vector3 direction;
     public float velocity;
     public PlayerType owner;
     [SerializeField] private int ttl;
@@ -21,7 +21,7 @@ public class Bullet : MonoBehaviour
 
     void FixedUpdate()
     {
-        GetComponent<Rigidbody>().linearVelocity = new Vector3(direction.x * velocity, direction.y * velocity, 0);
+        GetComponent<Rigidbody>().linearVelocity = direction * velocity;
         // Vector3 pos = transform.position;
         // pos.x += direction.x * velocity;
         // pos.y += direction.y * velocity;

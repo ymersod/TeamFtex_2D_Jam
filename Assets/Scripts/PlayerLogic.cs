@@ -4,7 +4,7 @@ public class PlayerLogic : MonoBehaviour
 {
     public GameObject spawner;
     public PlayerType playerType;
-    public Vector2 lookingDirection;
+    public Vector3 lookingDirection;
     public int money;
     public int health;
     public int ammo;

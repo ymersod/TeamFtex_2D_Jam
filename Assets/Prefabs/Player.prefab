@@ -124,7 +124,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3161145796971431864}
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f404d551aa94a4d49b3013db8de864d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  velocity: 0.3
+  force: 20
 --- !u!114 &7528141474634012465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,7 +251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   spawner: {fileID: 0}
   playerType: 0
-  lookingDirection: {x: 1, y: 0}
+  lookingDirection: {x: 1, y: 0, z: 0}
   money: 1000
   health: 10
   ammo: 100
@@ -265,7 +265,7 @@ Rigidbody:
   m_GameObject: {fileID: 6659096807730102826}
   serializedVersion: 5
   m_Mass: 1
-  m_LinearDamping: 0
+  m_LinearDamping: 5
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
