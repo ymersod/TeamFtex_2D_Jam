@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 1106382845186530998}
   - component: {fileID: 5468184488293721423}
   - component: {fileID: 6721188114406574474}
-  m_Layer: 0
+  - component: {fileID: 499491645429519343}
+  m_Layer: 7
   m_Name: Hotel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +102,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 384
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -112,3 +113,17 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.024863971, y: 0.02125254, z: 0.031028725}
   m_Center: {x: 0, y: 0, z: 0.006459838}
+--- !u!114 &499491645429519343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3742043243004941998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa904c2a0261d468594aa64689bf25b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HotelLogic
+  owner: 0
+  health: 15

@@ -2,20 +2,14 @@ using UnityEngine;
 
 public class Wall : MonoBehaviour
 {
-    [SerializeField] private bool vertical;
-    void OnTriggerEnter(Collider other)
+    void OnCollisionEnter(Collision collision)
     {
-        Bullet bullet = other.GetComponent<Bullet>();
+        Bullet bullet = collision.collider.GetComponent<Bullet>();
         if (bullet != null)
         {
-            if (vertical)
-            {
-                bullet.direction.x = - bullet.direction.x;
-            }
-            else
-            {
-                bullet.direction.z = - bullet.direction.z;
-            }
+            bullet.direction = Vector3.Reflect(bullet.direction, collision.GetContact(0).normal);
+            bullet.direction.y = 0;
+            // Debug.Log(collision.GetContact(0).normal);
         }
     }
 }

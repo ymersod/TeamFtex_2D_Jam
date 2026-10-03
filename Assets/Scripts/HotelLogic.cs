@@ -11,6 +11,7 @@ public class HotelLogic : MonoBehaviour
         if (bullet != null)
         {
             bullet.direction = Vector3.Reflect(bullet.direction, collision.GetContact(0).normal);
+            bullet.direction.y = 0;
             GetHit(bullet);
             // Debug.Log(collision.GetContact(0).normal);
         }

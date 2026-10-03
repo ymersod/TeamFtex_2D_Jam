@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1730954083743214487}
   - component: {fileID: 8824306927731293241}
   - component: {fileID: 3535736456383792856}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: OuterWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 1920
+    m_Bits: 384
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
