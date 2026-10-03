@@ -48,11 +48,14 @@ MonoBehaviour:
   color: {r: 0, g: 0, b: 0, a: 0}
   cost: 0
   rent: 0
-  owner: 
+  owner: 0
+  owned: 0
   spotActions: 0
   spotType: 0
   renderer: {fileID: 6832714689648337336}
-  house: {fileID: 3742043243004941998, guid: fa889c0b2419a50438fe4feaee719dbe, type: 3}
+  spotState: 0
+  house_prefab: {fileID: 3742043243004941998, guid: fa889c0b2419a50438fe4feaee719dbe, type: 3}
+  hotel_prefab: {fileID: 3742043243004941998, guid: 51f1c0f15abc38947b4b813aed523edf, type: 3}
 --- !u!1 &5483009165946277435
 GameObject:
   m_ObjectHideFlags: 0

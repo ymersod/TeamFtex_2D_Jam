@@ -16,3 +16,10 @@ public enum PlayerType
     p1,
     p2
 }
+
+public enum SpotState
+{
+    NoBuild,
+    HouseBuild,
+    HotelBuild
+}

@@ -27,7 +27,7 @@ public class BoardHandler : MonoBehaviour
     public void TryDeactivate(PlayerType playerType)
     {
         SpotLogic cachedSpot = spotsCached[playerType];
-        Debug.Log(playerType);
+        // Debug.Log(playerType);
         if (cachedSpot)
         {
             cachedSpot.DeactivateSpot(playerType);
@@ -38,7 +38,7 @@ public class BoardHandler : MonoBehaviour
 
     public void TriggerActionActiveSpot(PlayerType playerType)
     {
-        Debug.Log("Fig");
+        // Debug.Log("Fig");
         SpotLogic cachedSpot = spotsCached[playerType];
         if (cachedSpot)
         {
