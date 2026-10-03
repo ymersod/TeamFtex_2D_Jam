@@ -83,18 +83,4 @@ public class PlayerController : MonoBehaviour
             cooldown = 2;
         }
     }
-    // void OnCollisionEnter(Collision collision)
-    // {
-    //     Debug.Log(collision.thisGameObject.GetComponent<Bullet>());
-
-    // }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        Bullet bullet = collision.gameObject.GetComponent<Bullet>();
-        if (bullet != null)
-        {
-            GetComponent<PlayerLogic>().GetHit(bullet);
-        }
-    }
 }
