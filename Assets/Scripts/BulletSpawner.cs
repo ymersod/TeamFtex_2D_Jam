@@ -10,11 +10,11 @@ public class BulletSpawner : MonoBehaviour
         bullet.owner = playerType;
         if (playerType == PlayerType.p1)
         {
-            bullet.gameObject.GetComponent<SphereCollider>().includeLayers = 0b01000000000;
+            bullet.gameObject.layer = 9;
         }
         else
         {
-            bullet.gameObject.GetComponent<SphereCollider>().includeLayers = 0b10000000000;
+            bullet.gameObject.layer = 10;
         }
     }
 }

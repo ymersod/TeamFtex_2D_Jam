@@ -15,9 +15,11 @@ public class SpawnPlayers : MonoBehaviour
         player1.GetComponentInChildren<PlayerInput>().SwitchCurrentActionMap("P1");
         player1.GetComponentInChildren<PlayerLogic>().playerType = PlayerType.p1;
         player1.GetComponentInChildren<PlayerLogic>().spawner = gameObject;
+        player1.layer = 7;
         GameObject player2 = Instantiate(playerPrefeb, playerSpawnPosition2, Quaternion.identity);
         player2.GetComponentInChildren<PlayerInput>().SwitchCurrentActionMap("P2");
         player2.GetComponentInChildren<PlayerLogic>().playerType = PlayerType.p2;
         player2.GetComponentInChildren<PlayerLogic>().spawner = gameObject;
+        player2.layer = 8;
     }
 }

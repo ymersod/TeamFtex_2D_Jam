@@ -88,10 +88,9 @@ public class PlayerController : MonoBehaviour
 
     // }
 
-    void OnTriggerEnter(Collider other)
+    void OnCollisionEnter(Collision collision)
     {
-        // Debug.Log(other.GetComponent<Bullet>());
-        Bullet bullet = other.GetComponent<Bullet>();
+        Bullet bullet = collision.gameObject.GetComponent<Bullet>();
         if (bullet != null)
         {
             GetComponent<PlayerLogic>().GetHit(bullet);
