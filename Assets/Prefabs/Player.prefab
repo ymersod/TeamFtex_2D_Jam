@@ -141,8 +141,8 @@ MonoBehaviour:
   playerAvatar: 0
   lookingDirection: {x: 0, y: 0, z: 0}
   money: 100
-  health: 10
-  ammo: 100
+  health: 20
+  ammo: 20
   inJail: 0
   updateHud: 0
   nextMoneySign: 0
