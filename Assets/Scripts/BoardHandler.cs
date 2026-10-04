@@ -11,8 +11,9 @@ public class BoardHandler : MonoBehaviour
         spotsCached.Add(PlayerType.p2, null);
     }
 
-    public void ActivateSpot(SpotLogic spotLogic, PlayerType playerType)
+    public void ActivateSpot(SpotLogic spotLogic, PlayerLogic playerLogic)
     {
+        PlayerType playerType = playerLogic.playerType;
         SpotLogic cachedSpot = spotsCached[playerType];
         if (cachedSpot)
         {
@@ -21,13 +22,12 @@ public class BoardHandler : MonoBehaviour
 
         spotsCached[playerType] = spotLogic;
 
-        spotLogic.ActivateSpot(playerType);
+        spotLogic.ActivateSpot(playerLogic);
     }
 
     public void TryDeactivate(PlayerType playerType)
     {
         SpotLogic cachedSpot = spotsCached[playerType];
-        // Debug.Log(playerType);
         if (cachedSpot)
         {
             cachedSpot.DeactivateSpot(playerType);
@@ -36,13 +36,13 @@ public class BoardHandler : MonoBehaviour
         spotsCached[playerType] = null;
     }
 
-    public void TriggerActionActiveSpot(PlayerType playerType)
+    public void TriggerActionActiveSpot(PlayerLogic playerLogic)
     {
-        // Debug.Log("Fig");
+        PlayerType playerType = playerLogic.playerType;
         SpotLogic cachedSpot = spotsCached[playerType];
         if (cachedSpot)
         {
-            cachedSpot.TriggerSpot(playerType);
+            cachedSpot.TriggerSpot(playerLogic);
         }
     }
 }

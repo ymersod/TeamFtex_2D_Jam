@@ -11,6 +11,7 @@ public class PlayerLogic : MonoBehaviour
     public int ammo;
     public bool inJail;
     public bool updateHud;
+    public FreeMoneySigns nextMoneySign;
 
     void Start()
     {
@@ -47,6 +48,4 @@ public class PlayerLogic : MonoBehaviour
         Debug.Log("Kill");
         Destroy(gameObject);
     }
-
-
 }

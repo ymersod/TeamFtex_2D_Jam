@@ -1,6 +1,5 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.SocialPlatforms;
 public class SpotLogic : MonoBehaviour
 {
     public Color color;
@@ -12,6 +11,7 @@ public class SpotLogic : MonoBehaviour
     public SpotType spotType;
     public SpriteRenderer renderer;
     public SpotState spotState = SpotState.NoBuild;
+    public FreeMoneySigns freeMoneyDirection;
     private GameObject building;
 
     public GameObject house_prefab;
@@ -30,12 +30,23 @@ public class SpotLogic : MonoBehaviour
         textp2.text = "";
     }
 
-    public void ActivateSpot(PlayerType playerType)
+    public void ActivateSpot(PlayerLogic playerLogic)
     {
+        PlayerType playerType = playerLogic.playerType;
         renderer.color = Color.beige;
+
+        if (spotType == SpotType.Passive && spotActions == SpotActions.Start && playerLogic.nextMoneySign == freeMoneyDirection)
+        {
+            playerLogic.money += (int)cost;
+
+            if (playerLogic.nextMoneySign == FreeMoneySigns.NorthEast)
+                playerLogic.nextMoneySign = FreeMoneySigns.SouthWest;
+            if (playerLogic.nextMoneySign == FreeMoneySigns.SouthWest)
+                playerLogic.nextMoneySign = FreeMoneySigns.NorthEast;
+        }
+
         if (playerType == PlayerType.p1)
         {
-            // Debug.Log("ahhh");
             textp1.text = $"<color=green>{spotActions} [X]";
         }
         else
@@ -97,8 +108,9 @@ public class SpotLogic : MonoBehaviour
         building = houseSpawned;
     }
 
-    public void TriggerSpot(PlayerType playerType)
+    public void TriggerSpot(PlayerLogic playerLogic)
     {
+        PlayerType playerType = playerLogic.playerType;
         if (spotActions == SpotActions.Buy && spotType == SpotType.Active)
         {
             BuildHouse(playerType);

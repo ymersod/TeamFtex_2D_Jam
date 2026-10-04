@@ -62,12 +62,16 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: be7c42448cad58e4e9c6dc7b2daf9171, type: 2}
     - target: {fileID: 6659096807730102826, guid: 380629255285c47d3bf2f91b5ddd8592, type: 3}
       propertyPath: m_Name
-      value: Player Variant
+      value: HatPlayer
       objectReference: {fileID: 0}
     - target: {fileID: 7956324987512969414, guid: 380629255285c47d3bf2f91b5ddd8592, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 6389679353505580653, guid: 8b7c3cc134bbc384a967549006085e21, type: 3}
+    - target: {fileID: 8733307157772866001, guid: 380629255285c47d3bf2f91b5ddd8592, type: 3}
+      propertyPath: updateHud
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8733307157772866001, guid: 380629255285c47d3bf2f91b5ddd8592, type: 3}
       propertyPath: playerAvatar
       value: 2

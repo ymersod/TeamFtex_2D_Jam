@@ -1954,9 +1954,57 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 532402885760911625, guid: a26bdc32b56da4a36a8a5fa2004686dd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4879667713546106177, guid: ceba188eeebbbf0409ab79d42158a337, type: 3}
+    - target: {fileID: 1119555770475753145, guid: a26bdc32b56da4a36a8a5fa2004686dd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119555770475753145, guid: a26bdc32b56da4a36a8a5fa2004686dd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119555770475753145, guid: a26bdc32b56da4a36a8a5fa2004686dd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119555770475753145, guid: a26bdc32b56da4a36a8a5fa2004686dd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119555770475753145, guid: a26bdc32b56da4a36a8a5fa2004686dd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119555770475753145, guid: a26bdc32b56da4a36a8a5fa2004686dd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 4252748597253660192, guid: a26bdc32b56da4a36a8a5fa2004686dd, type: 3}
       propertyPath: m_Name
       value: Board
+      objectReference: {fileID: 0}
+    - target: {fileID: 5063783681228018178, guid: a26bdc32b56da4a36a8a5fa2004686dd, type: 3}
+      propertyPath: cost
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5063783681228018178, guid: a26bdc32b56da4a36a8a5fa2004686dd, type: 3}
+      propertyPath: spotActions
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5063783681228018178, guid: a26bdc32b56da4a36a8a5fa2004686dd, type: 3}
+      propertyPath: freeMoneyDirection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6670855337455644743, guid: a26bdc32b56da4a36a8a5fa2004686dd, type: 3}
+      propertyPath: cost
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 6670855337455644743, guid: a26bdc32b56da4a36a8a5fa2004686dd, type: 3}
+      propertyPath: spotActions
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8158057108633336562, guid: a26bdc32b56da4a36a8a5fa2004686dd, type: 3}
       propertyPath: m_LocalPosition.x

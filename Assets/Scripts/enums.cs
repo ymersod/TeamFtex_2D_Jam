@@ -30,3 +30,9 @@ public enum PlayerAvatar
     Car,
     Hat
 }
+
+public enum FreeMoneySigns
+{
+    SouthWest,
+    NorthEast
+}

@@ -88,7 +88,7 @@ public class PlayerController : MonoBehaviour
     {
         if (context.action.IsPressed() && cooldown == 0)
         {
-            boardHandler.TriggerActionActiveSpot(GetComponent<PlayerLogic>().playerType);
+            boardHandler.TriggerActionActiveSpot(GetComponent<PlayerLogic>());
             cooldown = 2;
         }
     }

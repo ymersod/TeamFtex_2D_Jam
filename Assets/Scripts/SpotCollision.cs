@@ -50,7 +50,7 @@ public class SpotCollision : MonoBehaviour
         }
 
         if (curSpot)
-            boardHandler.ActivateSpot(curSpot, playerType);
+            boardHandler.ActivateSpot(curSpot, pLogic);
         else
             boardHandler.TryDeactivate(playerType);
     }

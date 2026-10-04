@@ -16,7 +16,7 @@ public class GameHandler : MonoBehaviour
         p2Char = PlayerPrefs.GetInt("p2_char");
 
 
-        uIHandler.SetName(true, p1Name);
-        uIHandler.SetName(false, p2Name);
+        uIHandler.SetName(true, p1Name, (int)p1Char);
+        uIHandler.SetName(false, p2Name, (int)p2Char);
     }
 }
