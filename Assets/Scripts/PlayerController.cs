@@ -91,5 +91,9 @@ public class PlayerController : MonoBehaviour
             boardHandler.TriggerActionActiveSpot(GetComponent<PlayerLogic>());
             cooldown = 2;
         }
+        if (context.action.WasReleasedThisFrame())
+        {
+            Debug.Log("fisk");
+        }
     }
 }
