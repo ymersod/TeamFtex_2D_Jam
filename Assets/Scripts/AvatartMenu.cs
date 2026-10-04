@@ -78,6 +78,5 @@ public class AvatartMenu : MonoBehaviour
 
     public void UpdateAvatars()
     {
-        for ()
     }
 }
