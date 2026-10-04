@@ -38,8 +38,7 @@ public class Menu : MonoBehaviour
     void P1Ready()
     {
         p1_ready = !p1_ready;
-        p1_Ready.transform.GetComponent<Image>().color = p2_ready ? Color.green : Color.white;
-
+        p1_Ready.transform.GetComponent<Image>().color = p1_ready ? Color.green : Color.white;
         CheckForStart();
     }
     void P2Ready()
