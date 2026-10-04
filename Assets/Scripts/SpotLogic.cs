@@ -50,10 +50,10 @@ public class SpotLogic : MonoBehaviour
 
         if (playerType == PlayerType.p1 && spotType == SpotType.Active)
         {
-            textp1.text = $"<color=green>{spotActions} [X]";
+            textp1.text = $"<color=green>{spotActions}";
         }
         else
-            textp2.text = $"<color=green>{spotActions} [ENTER]";
+            textp2.text = $"<color=green>{spotActions}";
     }
 
     public void DeactivateSpot(PlayerType playerType)
@@ -66,8 +66,13 @@ public class SpotLogic : MonoBehaviour
     }
 
 
-    private void BuildHouse(PlayerType playerType)
+    private void BuildHouse(PlayerLogic playerLogic)
     {
+        PlayerType playerType = playerLogic.playerType;
+
+        if (playerLogic.money < cost)
+            return;
+
         if (owned && owner != playerType)
         {
             owned = true;
@@ -91,6 +96,8 @@ public class SpotLogic : MonoBehaviour
             Debug.Log($"Cant buy a house for player ${playerType}");
             return;
         }
+
+        playerLogic.money -= (int)cost;
 
         Transform spawn = transform.GetChild(1);
         Debug.Log(spawn.transform.rotation.z);
@@ -116,7 +123,7 @@ public class SpotLogic : MonoBehaviour
         PlayerType playerType = playerLogic.playerType;
         if (spotActions == SpotActions.Buy && spotType == SpotType.Active)
         {
-            BuildHouse(playerType);
+            BuildHouse(playerLogic);
         }
     }
 }
