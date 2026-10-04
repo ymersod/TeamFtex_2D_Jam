@@ -141,8 +141,8 @@ MonoBehaviour:
   playerAvatar: 0
   lookingDirection: {x: 0, y: 0, z: 0}
   money: 100
-  health: 10
-  ammo: 100
+  health: 20
+  ammo: 20
   inJail: 0
   updateHud: 0
   nextMoneySign: 0
@@ -158,8 +158,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f404d551aa94a4d49b3013db8de864d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  turnForce: 10
-  force: 50
+  turnForce: 20
+  force: 40
 --- !u!114 &1662415668038032937
 MonoBehaviour:
   m_ObjectHideFlags: 0
