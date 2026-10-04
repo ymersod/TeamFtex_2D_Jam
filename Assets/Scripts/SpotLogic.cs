@@ -78,17 +78,14 @@ public class SpotLogic : MonoBehaviour
             return;
         }
 
-        BoxCollider col = GetComponentInChildren<BoxCollider>();
-        Vector3 center = col.bounds.center;
-        float halfZ = col.bounds.extents.x;
-        float halfY = col.bounds.extents.y;
-        float halfX = col.bounds.extents.x;
+        Transform spawn = transform.GetChild(1);
+        Debug.Log(spawn.transform.rotation.z);
 
         float yBoundsPrefab = prefabChosen.GetComponent<MeshRenderer>().bounds.extents.y;
         Debug.Log(yBoundsPrefab);
-        Vector3 spawnPos = new Vector3(center.x, prefabChosen.transform.position.y + yBoundsPrefab, center.z + halfZ);
+        Vector3 spawnPos = new Vector3(spawn.position.x, prefabChosen.transform.position.y + yBoundsPrefab, spawn.position.z);
         GameObject houseSpawned = Instantiate(prefabChosen);
-        houseSpawned.transform.SetPositionAndRotation(spawnPos, Quaternion.Euler(-90, 90, 0));
+        houseSpawned.transform.SetPositionAndRotation(spawnPos, Quaternion.Euler(-90, 90 + spawn.transform.rotation.eulerAngles.z, 0));
         if (spotState == SpotState.HouseBuild)
         {
             houseSpawned.GetComponent<HouseLogic>().owner = playerType;
