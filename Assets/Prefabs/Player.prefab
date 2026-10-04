@@ -158,8 +158,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f404d551aa94a4d49b3013db8de864d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  turnForce: 20
-  force: 40
+  turnForce: 10
+  force: 50
 --- !u!114 &1662415668038032937
 MonoBehaviour:
   m_ObjectHideFlags: 0
