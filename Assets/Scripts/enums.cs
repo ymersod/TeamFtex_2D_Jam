@@ -23,3 +23,10 @@ public enum SpotState
     HouseBuild,
     HotelBuild
 }
+
+public enum PlayerAvatar
+{
+    Thimble,
+    Car,
+    Hat
+}
