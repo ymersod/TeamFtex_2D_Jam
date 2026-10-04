@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class HUDLogic : MonoBehaviour
 {
-    [SerializeField] private int maxAmmo;
     [SerializeField] private GameObject p1Monney;
     [SerializeField] private GameObject p1Ammo;
     [SerializeField] private GameObject p1Hp;
@@ -28,8 +27,8 @@ public class HUDLogic : MonoBehaviour
             {
                 // Debug.Log(p1Monney.GetComponent<TMP_Text>().text);
                 p1Monney.GetComponent<TMP_Text>().text = $"<color=green>{p1Logic.money}$</color>";
-                p1Ammo.GetComponent<TMP_Text>().text = $"Ammo: <color=yellow>{p1Logic.ammo}/{maxAmmo}$</color>";
-                p1Hp.GetComponent<TMP_Text>().text = $"Money: <color=red>{p1Logic.health}$</color>";
+                p1Ammo.GetComponent<TMP_Text>().text = $"<color=yellow>{p1Logic.ammo}⁍</color>";
+                p1Hp.GetComponent<TMP_Text>().text = $"<color=red>{p1Logic.health}♥️</color>";
                 // p1.GetComponentInChildren<PlayerLogic>().updateHud = false;
             }
         }
@@ -39,8 +38,8 @@ public class HUDLogic : MonoBehaviour
             if (p2Logic.updateHud)
             {
                 p2Monney.GetComponent<TMP_Text>().text = $"<color=green>{p2Logic.money}$</color>";
-                p2Ammo.GetComponent<TMP_Text>().text = $"Ammo: <color=yellow>{p2Logic.ammo}/{maxAmmo}$</color>";
-                p2Hp.GetComponent<TMP_Text>().text = $"Money: <color=red>{p2Logic.health}$</color>";
+                p2Ammo.GetComponent<TMP_Text>().text = $"<color=yellow>{p2Logic.ammo}⁍</color>";
+                p2Hp.GetComponent<TMP_Text>().text = $"<color=red>{p2Logic.health}♥️</color>";
                 // p2.GetComponentInChildren<PlayerLogic>().updateHud = false;
             }
         }
