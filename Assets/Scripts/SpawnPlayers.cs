@@ -24,9 +24,6 @@ public class SpawnPlayers : MonoBehaviour
         playerList[1] = thimblePlayer;
         playerList[2] = hatPlayer;
 
-
-
-
         int p1Char = PlayerPrefs.GetInt("p1_char");
         PlayerAvatar avatar1 = (PlayerAvatar)p1Char;
         // Debug.Log(avatar1);

@@ -39,6 +39,7 @@ public class SpotLogic : MonoBehaviour
         {
             Debug.Log(freeMoneyDirection);
             playerLogic.money += (int)cost;
+            playerLogic.ammo += (int)20;
 
             if (freeMoneyDirection == FreeMoneySigns.NorthEast)
                 playerLogic.nextMoneySign = FreeMoneySigns.SouthWest;

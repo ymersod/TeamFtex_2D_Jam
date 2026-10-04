@@ -23,7 +23,7 @@ public class PlayerLogic : MonoBehaviour
         if (ammo > 0 && !inJail)
         {
             // Debug.Log("PlayerLogic.Shoot()");
-            spawner.GetComponent<BulletSpawner>().Spawn(transform.position, lookingDirection, playerType);
+            spawner.GetComponent<BulletSpawner>().Spawn(transform.position + Vector3.up, lookingDirection, playerType, this);
             ammo--;
         }
     }
