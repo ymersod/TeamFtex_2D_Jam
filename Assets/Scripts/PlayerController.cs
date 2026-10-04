@@ -41,6 +41,7 @@ public class PlayerController : MonoBehaviour
 
         if (Mathf.Abs(walkingDirection.y) > 0.01f)
         {
+            Debug.Log("Walking");
             rbParent.AddForce(
                force * facingDirection.x * walkingDirection.y, 0, force * -facingDirection.y * walkingDirection.y,
                ForceMode.Force
