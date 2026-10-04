@@ -64,6 +64,8 @@ public class SpawnPlayers : MonoBehaviour
         player1.GetComponentInChildren<PlayerInput>().SwitchCurrentActionMap("P1");
         player1.GetComponentInChildren<PlayerLogic>().playerType = PlayerType.p1;
         player1.GetComponentInChildren<PlayerLogic>().spawner = gameObject;
+        player1.GetComponentInChildren<PlayerLogic>().nextMoneySign = FreeMoneySigns.NorthEast;
+
         player1.layer = 7;
         hud.GetComponent<HUDLogic>().p1 = player1;
 
@@ -72,6 +74,7 @@ public class SpawnPlayers : MonoBehaviour
         player2.GetComponentInChildren<PlayerInput>().SwitchCurrentActionMap("P2");
         player2.GetComponentInChildren<PlayerLogic>().playerType = PlayerType.p2;
         player2.GetComponentInChildren<PlayerLogic>().spawner = gameObject;
+        player2.GetComponentInChildren<PlayerLogic>().nextMoneySign = FreeMoneySigns.SouthWest;
         player2.layer = 8;
         hud.GetComponent<HUDLogic>().p2 = player2;
 
