@@ -1005,6 +1005,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 576308133370791125, guid: 34f0af60cad38473f94ebb67977e1080, type: 3}
+      propertyPath: hud
+      value: 
+      objectReference: {fileID: 5695498574090379876}
+    - target: {fileID: 576308133370791125, guid: 34f0af60cad38473f94ebb67977e1080, type: 3}
       propertyPath: carPlayer
       value: 
       objectReference: {fileID: 3238564025981486376, guid: f1d10955e6ec16843a886edb9a739bd3, type: 3}
@@ -1166,6 +1170,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2521bd22480517c409b264b45e501240, type: 3}
+--- !u!1 &5695498574090379876 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1952691993420757333, guid: 2521bd22480517c409b264b45e501240, type: 3}
+  m_PrefabInstance: {fileID: 5695498574090379875}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6963797670579230429
 PrefabInstance:
   m_ObjectHideFlags: 0
