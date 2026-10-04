@@ -10,6 +10,12 @@ public class PlayerLogic : MonoBehaviour
     public int health;
     public int ammo;
     public bool inJail;
+    public bool updateHud;
+
+    void Start()
+    {
+        updateHud = true;
+    }
 
     public void Shoot()
     {
