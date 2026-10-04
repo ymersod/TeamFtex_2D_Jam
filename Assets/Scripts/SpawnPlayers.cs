@@ -11,6 +11,7 @@ public class SpawnPlayers : MonoBehaviour
     [SerializeField] private GameObject thimblePlayer;
     [SerializeField] private GameObject carPlayer;
     [SerializeField] private GameObject hatPlayer;
+    [SerializeField] private GameObject hud;
 
     GameObject[] playerList = new GameObject[3];
 
