@@ -48,6 +48,8 @@ public class AvatartMenu : MonoBehaviour
         {
             p1Avatar = PlayerAvatar.Car;
         }
+        Debug.Log(p1Avatar);
+        UpdateAvatars();
     }
 
     public void ChangeAvatarP2()
@@ -76,6 +78,9 @@ public class AvatartMenu : MonoBehaviour
         {
             p2Avatar = PlayerAvatar.Car;
         }
+
+        Debug.Log(p2Avatar);
+        UpdateAvatars();
     }
 
     public void UpdateAvatars()
