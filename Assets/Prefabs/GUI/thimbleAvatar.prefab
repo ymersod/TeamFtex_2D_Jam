@@ -92,18 +92,18 @@ MonoBehaviour:
   sprites:
   - {fileID: -1449315840237082431, guid: 0c4d1aa3dc0be0b4f8f0599acb1f43dd, type: 3}
   - {fileID: 5339543298112131096, guid: 4ccffc0cdcaa59c43911a3014f01a62d, type: 3}
-  - {fileID: 1264232753787350583, guid: 16819bc862f901f4c8feeed1c2e8586a, type: 3}
-  - {fileID: 6699253024744737006, guid: 10005ade648099c4da6918d6bcc02f39, type: 3}
-  - {fileID: -8627243816492546158, guid: 0e1a61d61e332c24dbbd648b5042edf0, type: 3}
-  - {fileID: 8295993439363403090, guid: 2c54810742448d2439a8742cd9cb05ae, type: 3}
-  - {fileID: -9142646520416740908, guid: 4fcfa5209da6acd45be1a9a62d9906d5, type: 3}
-  - {fileID: 1878286932821818092, guid: 3cccf8e2fc7390345905e702e009c72f, type: 3}
+  - {fileID: -2929412514453400246, guid: 16819bc862f901f4c8feeed1c2e8586a, type: 3}
+  - {fileID: -2297123200321169258, guid: 10005ade648099c4da6918d6bcc02f39, type: 3}
+  - {fileID: 2467885259610590645, guid: 0e1a61d61e332c24dbbd648b5042edf0, type: 3}
+  - {fileID: 6161174880282492549, guid: 2c54810742448d2439a8742cd9cb05ae, type: 3}
+  - {fileID: -1012669915171217087, guid: 4fcfa5209da6acd45be1a9a62d9906d5, type: 3}
+  - {fileID: -974299926526235541, guid: 3cccf8e2fc7390345905e702e009c72f, type: 3}
   - {fileID: 546207233913118776, guid: 018ad3e89f0f5d042af6da04f0ef9724, type: 3}
   - {fileID: -2738987301118344419, guid: e5f5ad6076cc2f24a8b2a680977b47b9, type: 3}
   spritePerFrame: 1
   loop: 1
   destroyOnEnd: 0
-  incre: 0.2
+  incre: 0.15
 --- !u!114 &4845958905292412709
 MonoBehaviour:
   m_ObjectHideFlags: 0

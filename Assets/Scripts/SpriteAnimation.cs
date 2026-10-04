@@ -24,9 +24,11 @@ public class ImageAnimation : MonoBehaviour
         if (!loop && index == sprites.Length) return;
         frame += incre;
         if (frame < spritePerFrame) return;
+
         image.sprite = sprites[index];
         frame = 0;
         index++;
+
         if (index >= sprites.Length)
         {
             if (loop) index = 0;

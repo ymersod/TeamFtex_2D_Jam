@@ -18,6 +18,8 @@ public class AvatartMenu : MonoBehaviour
 
         p1Swap.onClick.AddListener(ChangeAvatarP1);
         p2Swap.onClick.AddListener(ChangeAvatarP2);
+
+        UpdateAvatars();
     }
 
     public void ChangeAvatarP1()
@@ -78,6 +80,28 @@ public class AvatartMenu : MonoBehaviour
 
     public void UpdateAvatars()
     {
-        for ()
+        foreach (Transform child in avatarP1Parent.transform)
+        {
+            if (child.GetComponent<PlayerAvatarMenu>().avatar == p1Avatar)
+            {
+                child.GetComponent<Image>().enabled = true;
+            }
+            else
+            {
+                child.GetComponent<Image>().enabled = false;
+            }
+        }
+
+        foreach (Transform child in avatartP2Parent.transform)
+        {
+            if (child.GetComponent<PlayerAvatarMenu>().avatar == p2Avatar)
+            {
+                child.GetComponent<Image>().enabled = true;
+            }
+            else
+            {
+                child.GetComponent<Image>().enabled = false;
+            }
+        }
     }
 }

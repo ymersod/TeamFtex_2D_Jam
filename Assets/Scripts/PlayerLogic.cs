@@ -4,23 +4,12 @@ public class PlayerLogic : MonoBehaviour
 {
     public GameObject spawner;
     public PlayerType playerType;
+    public PlayerAvatar playerAvatar;
     public Vector3 lookingDirection;
     public int money;
     public int health;
     public int ammo;
     public bool inJail;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     public void Shoot()
     {

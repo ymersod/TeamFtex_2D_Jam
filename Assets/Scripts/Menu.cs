@@ -38,11 +38,14 @@ public class Menu : MonoBehaviour
     void P1Ready()
     {
         p1_ready = !p1_ready;
+        p1_Ready.transform.GetComponent<Image>().color = p2_ready ? Color.green : Color.white;
+
         CheckForStart();
     }
     void P2Ready()
     {
         p2_ready = !p2_ready;
+        p2_Ready.transform.GetComponent<Image>().color = p2_ready ? Color.green : Color.white;
         CheckForStart();
     }
 
@@ -72,10 +75,15 @@ public class Menu : MonoBehaviour
 
     public void OnClickStart()
     {
+        PlayerAvatar p1Avatar = GetComponent<AvatartMenu>().p1Avatar;
+        PlayerAvatar p2Avatar = GetComponent<AvatartMenu>().p2Avatar;
+        int p1AvatarNumber = (int)p1Avatar;
+        int p2AvatarNumber = (int)p2Avatar;
+
         PlayerPrefs.SetString("p1_name", p1_name);
         PlayerPrefs.SetString("p2_name", p2_name);
-        PlayerPrefs.SetInt("p1_char", 1);
-        PlayerPrefs.SetInt("p2_char", 1);
+        PlayerPrefs.SetInt("p1_char", p1AvatarNumber);
+        PlayerPrefs.SetInt("p2_char", p2AvatarNumber);
 
         Debug.Log($"Player1: {p1_name}");
         Debug.Log($"Player2: {p2_name}");
