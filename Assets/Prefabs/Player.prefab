@@ -145,6 +145,7 @@ MonoBehaviour:
   ammo: 100
   inJail: 0
   updateHud: 0
+  nextMoneySign: 0
 --- !u!114 &3775217859573537625
 MonoBehaviour:
   m_ObjectHideFlags: 0
