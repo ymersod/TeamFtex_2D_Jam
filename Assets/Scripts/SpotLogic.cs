@@ -37,15 +37,18 @@ public class SpotLogic : MonoBehaviour
 
         if (spotType == SpotType.Passive && spotActions == SpotActions.Start && playerLogic.nextMoneySign == freeMoneyDirection)
         {
+            Debug.Log(freeMoneyDirection);
             playerLogic.money += (int)cost;
 
-            if (playerLogic.nextMoneySign == FreeMoneySigns.NorthEast)
+            if (freeMoneyDirection == FreeMoneySigns.NorthEast)
                 playerLogic.nextMoneySign = FreeMoneySigns.SouthWest;
-            if (playerLogic.nextMoneySign == FreeMoneySigns.SouthWest)
+            if (freeMoneyDirection == FreeMoneySigns.SouthWest)
                 playerLogic.nextMoneySign = FreeMoneySigns.NorthEast;
+
+            Debug.Log(playerLogic.nextMoneySign);
         }
 
-        if (playerType == PlayerType.p1)
+        if (playerType == PlayerType.p1 && spotType == SpotType.Active)
         {
             textp1.text = $"<color=green>{spotActions} [X]";
         }

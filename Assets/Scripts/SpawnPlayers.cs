@@ -1,4 +1,5 @@
 using System;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -65,6 +66,7 @@ public class SpawnPlayers : MonoBehaviour
         player1.GetComponentInChildren<PlayerLogic>().playerType = PlayerType.p1;
         player1.GetComponentInChildren<PlayerLogic>().spawner = gameObject;
         player1.GetComponentInChildren<PlayerLogic>().nextMoneySign = FreeMoneySigns.NorthEast;
+        player1.transform.rotation = Quaternion.Euler(0, 0f, 180f);
 
         player1.layer = 7;
         hud.GetComponent<HUDLogic>().p1 = player1;
