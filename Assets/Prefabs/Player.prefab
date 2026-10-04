@@ -144,6 +144,7 @@ MonoBehaviour:
   health: 10
   ammo: 100
   inJail: 0
+  updateHud: 0
 --- !u!114 &3775217859573537625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -477,7 +478,7 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 1536
+    m_Bits: 1920
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
