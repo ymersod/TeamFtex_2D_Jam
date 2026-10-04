@@ -50,10 +50,10 @@ public class SpotLogic : MonoBehaviour
 
         if (playerType == PlayerType.p1 && spotType == SpotType.Active)
         {
-            textp1.text = $"<color=green>{spotActions} [X]";
+            textp1.text = $"<color=green>{spotActions} [Q]";
         }
         else
-            textp2.text = $"<color=green>{spotActions} [ENTER]";
+            textp2.text = $"<color=green>{spotActions} [.]";
     }
 
     public void DeactivateSpot(PlayerType playerType)
