@@ -107,7 +107,7 @@
                 {
                     "name": "",
                     "id": "76f699ed-3b95-4871-bd4f-c9770870bdf6",
-                    "path": "<Keyboard>/leftShift",
+                    "path": "<Keyboard>/tab",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -118,7 +118,7 @@
                 {
                     "name": "",
                     "id": "0f20051e-3138-4122-83e6-5523e3154989",
-                    "path": "<Keyboard>/x",
+                    "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -164,17 +164,6 @@
                 }
             ],
             "bindings": [
-                {
-                    "name": "",
-                    "id": "d35c0e44-e852-4c1d-9fc7-bd582f65a674",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
                 {
                     "name": "2D Vector",
                     "id": "f8a6dfdd-4c45-41fd-a331-389aee50d184",
@@ -243,8 +232,19 @@
                 },
                 {
                     "name": "",
+                    "id": "cbe940c3-e565-45d6-a6eb-a33decc05fe0",
+                    "path": "<Keyboard>/l",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "4a7da9dc-c1d4-4d63-99df-a7a8aa2f8902",
-                    "path": "<Keyboard>/enter",
+                    "path": "<Keyboard>/period",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

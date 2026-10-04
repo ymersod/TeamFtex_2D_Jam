@@ -11,12 +11,16 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] float force = 10f;
     int cooldown;
+
+    private SpriteRenderer spriteRenderer;
     void Start()
     {
         boardHandler = FindAnyObjectByType<BoardHandler>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
 
         cooldown = 0;
         walkingDirection = new Vector3(0, 0, 0);
+
     }
 
     void FixedUpdate()
@@ -30,6 +34,8 @@ public class PlayerController : MonoBehaviour
             -Mathf.Cos(z),
             Mathf.Sin(z)
         );
+
+        spriteRenderer.flipX = z < -90f || z > 90f;
 
         GetComponent<PlayerLogic>().lookingDirection = new Vector3(facingDirection.x, 0, -facingDirection.y);
 
@@ -71,6 +77,8 @@ public class PlayerController : MonoBehaviour
         {
             // Debug.Log("PlayerController.OnShoot()");
             GetComponent<PlayerLogic>().Shoot();
+            Animator anim = GetComponent<Animator>();
+            anim.SetTrigger("Shoot");
             cooldown = 2;
         }
     }
