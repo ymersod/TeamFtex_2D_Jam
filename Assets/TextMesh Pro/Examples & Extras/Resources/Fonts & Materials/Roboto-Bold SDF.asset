@@ -621,6 +621,21 @@ MonoBehaviour:
     m_Scale: 1
     m_AtlasIndex: 0
     m_ClassDefinitionType: 0
+  - m_Index: 72
+    m_Metrics:
+      m_Width: 42.84375
+      m_Height: 68.375
+      m_HorizontalBearingX: 2.90625
+      m_HorizontalBearingY: 67.5
+      m_HorizontalAdvance: 50.71875
+    m_GlyphRect:
+      m_X: 260
+      m_Y: 230
+      m_Width: 44
+      m_Height: 69
+    m_Scale: 1
+    m_AtlasIndex: 0
+    m_ClassDefinitionType: 0
   m_CharacterTable:
   - m_ElementType: 1
     m_Unicode: 8230
@@ -741,6 +756,10 @@ MonoBehaviour:
   - m_ElementType: 1
     m_Unicode: 102
     m_GlyphIndex: 74
+    m_Scale: 1
+  - m_ElementType: 1
+    m_Unicode: 100
+    m_GlyphIndex: 72
     m_Scale: 1
   m_AtlasTextures:
   - {fileID: 28204114720316640}
@@ -869,6 +888,10 @@ MonoBehaviour:
     m_Y: 152
     m_Width: 51
     m_Height: 88
+  - m_X: 250
+    m_Y: 220
+    m_Width: 63
+    m_Height: 88
   m_FreeGlyphRects:
   - m_X: 76
     m_Y: 29
@@ -886,10 +909,6 @@ MonoBehaviour:
     m_Y: 102
     m_Width: 26
     m_Height: 70
-  - m_X: 135
-    m_Y: 281
-    m_Width: 888
-    m_Height: 742
   - m_X: 0
     m_Y: 425
     m_Width: 1023
@@ -938,18 +957,10 @@ MonoBehaviour:
     m_Y: 172
     m_Width: 2
     m_Height: 20
-  - m_X: 174
-    m_Y: 275
-    m_Width: 849
-    m_Height: 748
   - m_X: 215
     m_Y: 154
     m_Width: 64
     m_Height: 38
-  - m_X: 250
-    m_Y: 154
-    m_Width: 29
-    m_Height: 869
   - m_X: 391
     m_Y: 187
     m_Width: 632
@@ -958,13 +969,29 @@ MonoBehaviour:
     m_Y: 152
     m_Width: 1
     m_Height: 871
+  - m_X: 135
+    m_Y: 308
+    m_Width: 888
+    m_Height: 715
+  - m_X: 135
+    m_Y: 281
+    m_Width: 115
+    m_Height: 742
+  - m_X: 174
+    m_Y: 275
+    m_Width: 76
+    m_Height: 748
   - m_X: 250
+    m_Y: 154
+    m_Width: 29
+    m_Height: 66
+  - m_X: 313
     m_Y: 240
-    m_Width: 773
+    m_Width: 710
     m_Height: 783
-  - m_X: 250
+  - m_X: 313
     m_Y: 220
-    m_Width: 90
+    m_Width: 27
     m_Height: 803
   m_FontFeatureTable:
     m_MultipleSubstitutionRecords: []
